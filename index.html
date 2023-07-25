@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <style>body {
+  font-family: TRebuchet MS;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  width: 300px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #666;
+}
+
+a {
+  color: lime;
+  font-weight: ;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.contact-card {
+  width: 80%%;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-card li {
+  margin-bottom: 5px;
+}
+
+.contact-card a {
+
+  text-decoration: none;
+}
+</style>
+<head>
+  <title>monkegamer.com</title>
+</head>
+<body>
+  <h1>monkegamer.com</h1>
+
+  <div id="project-container"></div>
+  <div class="contact-card">
+    <h2>Contact Information</h2>
+    <ul>
+      <li><strong>Discord:</strong> <a href="https://discord.com/users/643980506299367436">skully416</a></li>
+      <li><strong>YouTube:</strong> <a href="https://youtube.com/@immayr">immayr</a></li>
+            <li><strong>Twitch:</strong> <a href="https://www.twitch.tv/immayrushartfan">immayrushartfan</a></li>
+                  <li><strong>Twitter:</strong> <a href="https://twitter.com/immayrushartfan">immay</a></li>
+    </ul>
+  </div>
+</body>
+<script>// Define your projects as an array of objects with properties: title, description, and link.
+const projects = [
+  {
+    title: "Screen Recorder",
+    description: "This is a Javascript screen recorder where you can record videos on PC using your browser's screensharing functions. Exports as WEBM.",
+    link: "https://recorder.monkegamer.com"
+  },
+  {
+    title: "Luminary",
+    description: "This is a website that I made for the small arsenal youtuber, Luminary. Not sure why I made this for him, I was just bored that day.",
+    link: "https://luminary.monkegamer.com"
+  },
+  {
+    title: "Original",
+    description: "This was the first version of monkegamer.com that I made from scratch. It featured some of the first HTML5 games that I've made.",
+    link: "https://og.monkegamer.com"
+  },
+    {
+    title: "OGGames",
+    description: "This is an emulator website with some of the best games in existence. If you want me to add a game, make a request on the google form.",
+    link: "https://oggames.monkegamer.com/"
+  },
+    {
+    title: "Crypto Trader",
+    description: "Not sure why I made this, I was just extremely bored one day and decided this is what I was gonna do. Took me like 20 minutes to make this.",
+    link: "https://crypto.monkegamer.com"
+  },
+    {
+    title: "Ram",
+    description: "Here, you can download free ram (not clickbait!) This website is obviously a joke, it doesn't actually give you free ram. Sorry.",
+    link: "https://ram.monkegamer.com"
+  },
+  {
+    title: "Danny's Wrestling Gallery",
+    description: "I made this for my dad because I was bored on a wednesday night. There is moderation, dont expect to be able to post anything.",
+    link: "https://danny.monkegamer.com"
+  },
+    {
+    title: "Team Void",
+    description: "I made this for an arsenal clan called teamvoid. I dont really know who plays in a roblox arsenal clan besides the people in here.",
+    link: "https://teamvoid.monkegamer.com"
+  }
+];
+
+// Create project cards dynamically
+const projectContainer = document.getElementById('project-container');
+
+projects.forEach(project => {
+  const card = document.createElement('div');
+  card.classList.add('project-card');
+
+  const title = document.createElement('h2');
+  title.classList.add('project-title');
+  title.textContent = project.title;
+
+  const description = document.createElement('p');
+  description.classList.add('project-description');
+  description.textContent = project.description;
+
+  const link = document.createElement('a');
+  link.href = project.link;
+  link.textContent = 'View Project';
+
+  card.appendChild(title);
+  card.appendChild(description);
+  card.appendChild(link);
+
+  projectContainer.appendChild(card);
+});
+</script>
+</html>
